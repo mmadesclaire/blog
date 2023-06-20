@@ -10,6 +10,7 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
+  const footerText = site.siteMetadata?.footerText || ''
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -28,7 +29,8 @@ const BlogPostTemplate = ({
         />
         <hr />
         <footer>
-          <Bio />
+          {footerText}
+          {/* <Bio /> */}
         </footer>
       </article>
       <nav className="blog-post-nav">
